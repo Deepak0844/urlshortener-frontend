@@ -1,0 +1,94 @@
+.signinForm,
+.signupForm,
+.resetPassword,
+.forgetPassForm {
+  height: 400px;
+  width: 400px;
+  background-color: rgba(255, 255, 255, 0.13);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  padding: 35px 35px;
+  padding-bottom: 20px;
+  z-index: 0;
+}
+.signupForm {
+  height: 580px;
+}
+.forgetPassForm {
+  height: 220px;
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+}
+.resetPassword {
+  height: 300px;
+  width: 380px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.forgetPassForm > h2,
+.resetPassword > h2 {
+  text-align: center;
+  margin: 0px;
+  margin-bottom: 10px;
+}
+.signinBG {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(48, 101, 180);
+}
+.signUpBG {
+  width: 100%;
+  height: 100vh;
+  background-color: lightslategray;
+}
+.forgetPassBG,
+.passVerifyBG {
+  width: 100%;
+  height: 100vh;
+  background-color: cadetblue;
+}
+.signinForm > h1,
+.signupForm > h1 {
+  color: black;
+  text-align: center;
+  margin: -10px;
+}
+.signinForm,
+.signupForm * {
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  outline: none;
+  border: none;
+}
+.signBtn {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.signBtn > p {
+  font-size: 13px;
+  color: black;
+  cursor: pointer;
+  text-align: center;
+}
+.signBtn span {
+  color: rgb(42, 6, 248);
+}
+
+@media (max-width: 500px) {
+  .signinForm,
+  .signupForm,
+  .forgetPassForm,
+  .resetPassword {
+    width: 340px;
+  }
+}

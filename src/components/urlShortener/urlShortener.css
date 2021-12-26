@@ -1,0 +1,37 @@
+.urlBG {
+    width: 100%;
+    height:  calc(100vh - 64px);
+    background-image: url(../../assets/cool-background.png);
+    background-repeat: no-repeat;
+    background-size: 2000px 1200px;
+  }
+  form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 50px;
+    height: 500px;
+  }
+  form > p {
+    letter-spacing: 2px;
+    font-size: 14px;
+    padding: 5px;
+  }
+  form > h1 {
+    font-weight: bolder;
+  }
+  .urlInput {
+    padding: 0 100px;
+  }
+  .copyInput {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+  }
+  @media (max-width: 700px) {
+    .urlInput {
+      padding: 0 15px;
+    }
+  }
+  
