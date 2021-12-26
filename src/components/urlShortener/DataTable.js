@@ -72,10 +72,10 @@ export function DataTable() {
               >
                 <h6>
                   <a
-                    href={`http://localhost:9000/url/${row.shortId}`}
+                    href={`${URL}/url/${row.shortId}`}
                     target="_blank"
                   >
-                    http://localhost:9000/url/{row.shortId}
+                    https://backendurlshortener.herokuapp.com/url/{row.shortId}
                   </a>
                 </h6>
               </TableCell>

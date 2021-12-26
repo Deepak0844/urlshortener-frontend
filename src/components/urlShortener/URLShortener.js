@@ -1,4 +1,4 @@
-import './urlShortener.css';
+import "./urlShortener.css";
 import { toast } from "react-toastify";
 import { useFormik } from "formik";
 import axios from "axios";
@@ -19,18 +19,18 @@ const formValidationSchema = yup.object({
     .required("Please Enter the Url"),
 });
 
-
 export function URLShortener() {
   const [url, setUrl] = useState("");
-  const { handleSubmit, values, handleChange, handleBlur, errors, touched } = useFormik({
-    initialValues: {
-      url: "",
-    },
-    validationSchema: formValidationSchema,
-    onSubmit: (url) => {
-      verifyBtn(url);
-    },
-  });
+  const { handleSubmit, values, handleChange, handleBlur, errors, touched } =
+    useFormik({
+      initialValues: {
+        url: "",
+      },
+      validationSchema: formValidationSchema,
+      onSubmit: (url) => {
+        verifyBtn(url);
+      },
+    });
 
   const verifyBtn = (url) => {
     console.log(url);
@@ -61,7 +61,8 @@ export function URLShortener() {
                 isInvalid={!!errors.url}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                aria-describedby="basic-addon3" />
+                aria-describedby="basic-addon3"
+              />
               <Button type="submit" variant="contained">
                 SHORTEN
               </Button>
@@ -74,7 +75,7 @@ export function URLShortener() {
 
           {url ? (
             <div>
-              <h4 style={{ marginTop: "50px" }}>Shorten Link</h4>
+              <h4 style={{ marginTop: "50px"}}>Shorten Link</h4>
               <div className="copyInput">
                 <input
                   variant="outlined"
@@ -82,7 +83,8 @@ export function URLShortener() {
                   label="short url"
                   readOnly
                   style={{
-                    width: "310px",
+                    width: "520px",
+                    marginRight:"5px",
                     background: "transparent",
                     outline: "none",
                     border: "none",
