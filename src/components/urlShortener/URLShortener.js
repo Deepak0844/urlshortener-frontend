@@ -7,6 +7,7 @@ import CopyAllIcon from "@mui/icons-material/CopyAll";
 import { Popover, Button, Typography } from "@mui/material";
 import { InputGroup, FormControl, Form } from "react-bootstrap";
 import * as yup from "yup";
+import { URL } from "../Authentication/url";
 
 const formValidationSchema = yup.object({
   url: yup
@@ -35,7 +36,7 @@ export function URLShortener() {
     console.log(url);
 
     axios
-      .post(`http://localhost:9000/url`, url)
+      .post(`${URL}/url`, url)
       .then((res) => {
         toast.success("Short URL created successfully");
         setUrl(res.data.shortUrl);

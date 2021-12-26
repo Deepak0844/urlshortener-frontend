@@ -29,9 +29,11 @@ export function ChartData() {
         console.log(err);
       });
   };
+
+
   useEffect(() => {
     getData();
-  }, [value, months]);
+  }, [getData]);
   return (
     <div className="chartContainer">
       {value ? <Chart value={value} months={months} /> : ""}
