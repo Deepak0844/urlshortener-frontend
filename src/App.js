@@ -10,7 +10,6 @@ import { useHistory } from "react-router-dom";
 
 //dashboard
 import React from "react";
-import "antd/dist/antd.css";
 import { Layout, Menu } from "antd";
 
 //header
