@@ -1,7 +1,7 @@
 import { Route, Redirect } from "react-router-dom";
 
 //protected router does not allows to some page when the user does not sign in
-export function ProtectedRouter({ component, ...rest }) {
+export default function ProtectedRouter({ component, ...rest }) {
   const RenderComponents = component;
   const hasToken = localStorage.getItem("token");
   console.log(hasToken);

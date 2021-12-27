@@ -13,7 +13,7 @@ const formValidationSchema = yup.object({
 });
 
 //forget password
-export function ForgetPassword() {
+export default function ForgetPassword() {
   const history = useHistory();
   const { handleSubmit, values, handleChange, handleBlur, errors, touched } =
     useFormik({

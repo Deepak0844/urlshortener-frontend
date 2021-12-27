@@ -3,10 +3,10 @@ import { useEffect, useState } from "react";
 import "./dashboard.css";
 import { PageHeader } from "antd";
 import { URL } from "../Authentication/url";
-import { ChartData } from "./ChartData";
+import  ChartData  from "./ChartData";
 
 //Dashboard
-export function Dashboard() {
+export default function Dashboard() {
   const [createdPerDay, setcreatedPerDay] = useState([]);
   const [createdThisMonth, setcreatedThismonth] = useState([]);
   const [data, setData] = useState([""]);

@@ -19,7 +19,7 @@ const formValidationSchema = yup.object({
     .required("Please Enter the Url"),
 });
 
-export function URLShortener() {
+export default function URLShortener() {
   const [url, setUrl] = useState("");
   const { handleSubmit, values, handleChange, handleBlur, errors, touched } =
     useFormik({

@@ -20,7 +20,7 @@ import LastPageIcon from "@mui/icons-material/LastPage";
 import { URL } from "../Authentication/url";
 
 //show all url data
-export function DataTable() {
+export default function DataTable() {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
   const [url, setUrl] = useState([]);
@@ -73,7 +73,7 @@ export function DataTable() {
                 <h6>
                   <a
                     href={`${URL}/url/${row.shortId}`}
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                   >
                     https://backendurlshortener.herokuapp.com/url/{row.shortId}
                   </a>

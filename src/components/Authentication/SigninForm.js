@@ -1,3 +1,4 @@
+import './authentication.css'
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useHistory } from "react-router-dom";
@@ -6,9 +7,6 @@ import { useFormik } from "formik";
 import * as yup from "yup";
 import { TextField } from "@mui/material";
 import { URL } from "./url";
-//context
-import { useContext } from "react";
-import UserContext from "../../App";
 
 const formValidationSchema = yup.object({
   email: yup.string().required("please fill the Email"),
@@ -19,9 +17,8 @@ const formValidationSchema = yup.object({
 });
 
 //signin
-export function SigninForm() {
+export default function SigninForm() {
   const history = useHistory();
-  const setAuth = useContext(UserContext);
 
   const { handleSubmit, values, handleChange, handleBlur, errors, touched } =
     useFormik({
@@ -41,14 +38,12 @@ export function SigninForm() {
       .then((res) => {
         localStorage.setItem("token", res.data.token);
         toast.success(res.data.message);
-        setAuth(true);
-      })
-      .then(() => {
-        history.push("/urlshortener");
+        history.push("/");
       })
       .catch((err) => {
-        toast.error(err.response.data.message);
+        // toast.error(err.response.data.message);
         console.log(err);
+        // console.log(err.response.data.message);
       });
   };
   return (

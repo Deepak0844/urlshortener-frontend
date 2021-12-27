@@ -1,3 +1,4 @@
+import './authentication.css'
 import { toast } from "react-toastify";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
@@ -28,7 +29,7 @@ const formValidationSchema = yup.object({
 });
 
 //signup
-export function SignUpForm() {
+export default function SignUpForm() {
   const history = useHistory();
 
   const { handleSubmit, values, handleChange, handleBlur, errors, touched } =
