@@ -56,6 +56,7 @@ function DashboardLayout() {
     <div>
       <Layout>
         <Sider
+        style={{zIndex:1}}
           breakpoint="lg"
           collapsedWidth="0"
           onBreakpoint={(broken) => {
